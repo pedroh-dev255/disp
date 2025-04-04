@@ -39,7 +39,6 @@ async function processCSV(filePath) {
     .on('data', (row) => contacts.push(row))
     .on('end', async () => {
       console.log(`CSV processado. ${contacts.length} contatos encontrados.`);
-      
       // Processar cada contato
       const results = await Promise.all(contacts.map(async (contact) => {
         const mensagemPersonalizada = process.env.MENSAGEM.replace('{nome}', contact.nome);

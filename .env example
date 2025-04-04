@@ -1,2 +1,5 @@
 API_URL="https://localhost/api/messages/send"
 API_KEY=""
+
+# Configurações do envio de mensagens, o {nome} será substituído pelo nome do usuário
+MENSAGEM=" Boa tarde {nome}"
